@@ -1,0 +1,92 @@
+[
+    {
+        "device_id": 1000,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 1,
+        "box_status": 1,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1001,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 1,
+        "box_status": 1,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1002,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 0,
+        "box_status": 1,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1003,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 1,
+        "box_status": 0,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1004,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 1,
+        "box_status": 1,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1005,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 0,
+        "box_status": 1,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1006,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 1,
+        "box_status": 1,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1007,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 1,
+        "box_status": 1,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1008,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 1,
+        "box_status": 0,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    },
+    {
+        "device_id": 1009,
+        "created_at": "2004-06-09",
+        "device_type": "Mack",
+        "running_status": 0,
+        "box_status": 0,
+        "store_name": "Jack",
+        "qr_code": "http://dummyimage.com/100x100"
+    }
+]

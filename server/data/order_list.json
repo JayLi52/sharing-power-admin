@@ -1,0 +1,102 @@
+[
+    {
+        "member_id": 100,
+        "start_time": "2010-07-27",
+        "box_id": 1000,
+        "charger_id": 500,
+        "duration": 10,
+        "status_cn": 1,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 101,
+        "start_time": "2010-07-27",
+        "box_id": 1001,
+        "charger_id": 501,
+        "duration": 20,
+        "status_cn": 0,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 102,
+        "start_time": "2010-07-27",
+        "box_id": 1002,
+        "charger_id": 502,
+        "duration": 10,
+        "status_cn": 1,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 103,
+        "start_time": "2010-07-27",
+        "box_id": 1003,
+        "charger_id": 503,
+        "duration": 10,
+        "status_cn": 1,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 104,
+        "start_time": "2010-07-27",
+        "box_id": 1004,
+        "charger_id": 504,
+        "duration": 10,
+        "status_cn": 0,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 105,
+        "start_time": "2010-07-27",
+        "box_id": 1005,
+        "charger_id": 505,
+        "duration": 50,
+        "status_cn": 1,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 106,
+        "start_time": "2010-07-27",
+        "box_id": 1006,
+        "charger_id": 506,
+        "duration": 20,
+        "status_cn": 1,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 107,
+        "start_time": "2010-07-27",
+        "box_id": 1007,
+        "charger_id": 507,
+        "duration": 50,
+        "status_cn": 0,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 108,
+        "start_time": "2010-07-27",
+        "box_id": 1008,
+        "charger_id": 508,
+        "duration": 20,
+        "status_cn": 1,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    },
+    {
+        "member_id": 109,
+        "start_time": "2010-07-27",
+        "box_id": 1009,
+        "charger_id": 509,
+        "duration": 10,
+        "status_cn": 0,
+        "pay_amount": 1,
+        "store_name": "Jack"
+    }
+]
