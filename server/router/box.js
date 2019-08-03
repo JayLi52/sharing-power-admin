@@ -4,12 +4,13 @@ const MongoClient = require("mongodb").MongoClient;
 const url = "mongodb://localhost:27017";
 
 router.get("/", function(req, res, next) {
+  console.log(req.query)
   MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) throw err;
     var dbase = db.db("sharing");
     dbase
       .collection("boxes")
-      .find({})
+      .find(req.query)
       .toArray(function(err, result) {
         // 返回集合中所有数据
         if (err) throw err;

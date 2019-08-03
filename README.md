@@ -1,29 +1,5 @@
-# sharing2
+# 校园共享充电管理系统
 
-## Project setup
-```
-npm install
-```
+- 前端开发选择 Vue 框架
+- 后端使用 NodeJS 和 MongoDB 数据库
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

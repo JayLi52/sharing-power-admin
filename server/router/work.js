@@ -52,18 +52,20 @@ router.put("/", async function(req, res, next) {
   try {
     const db = await MongoClient.connect(url, { useNewUrlParser: true });
     const works = db.db("sharing").collection("works");
-    console.log(111);
+    const {id, status, finishTime, usingTime} = req.body
     const result = await works.updateOne(
       // query
       {
-        ...res.body
+        id,
+        status
       },
 
       // update
       {
         $set: {
-          isReturned: true,
-          usingTime: req.body.usingTime
+          status: 1,
+          finishTime,
+          usingTime
         }
       }
     );

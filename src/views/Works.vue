@@ -13,7 +13,7 @@
         :loading="loading"
         @change="handleTableChange"
       >
-        <a slot="operation" slot-scope="text" @click="() => update(text)">更新工单状态</a>
+        <a slot="operation" slot-scope="text, record" @click="() => update(record)">更新工单状态</a>
         <template slot="status" slot-scope="text, record">
           <a-tag color="#87d068" v-if="record.status==1">已完成</a-tag>
           <a-tag color="#f50" v-if="record.status==0">未完成</a-tag>
@@ -73,6 +73,10 @@ const columns = [
   {
     title: "工单结束时间",
     dataIndex: "finishTime"
+  },
+  {
+    title: "工单时长",
+    dataIndex: "usingTime"
   },
   {
     title: " 工单状态",
@@ -167,7 +171,15 @@ export default {
     update(data) {
       // 更新工单状态
       axios.put('http://localhost:3100/v1/work', {
-        
+        ...data,
+        finishTime: new Date().toString(),
+        usingTime: parseInt(
+                (new Date().getTime() - new Date(data.commitTime).getTime()) /
+                  60000,
+                10
+              ) + " Minutes"
+      }).then(res => {
+        this.fetch()
       })
     }
   }

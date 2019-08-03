@@ -20,32 +20,21 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/", async function(req, res, next) {
-  const body = res.body;
+  const body = req.body;
 
   const db = await MongoClient.connect(url, { useNewUrlParser: true });
   const advertise = db.db("sharing").collection("advertise");
-  let result = null;
-  result = await advertise
-    .find({
+  advertise.insertOne(
+    {
       ...body
-    })
-    .toArray(function(err, result) {
+    },
+    (err, result) => {
       // 返回集合中所有数据
       if (err) throw err;
       // 发送响应数据
-      res.send(JSON.stringify({ msg: "add EXIST", res: result})); // 查询的结果转换成字符串返回
-    });
-
-  result = await advertise
-    .insertOne({
-      ...body
-    })
-    .toArray(function(err, result) {
-      // 返回集合中所有数据
-      if (err) throw err;
-      // 发送响应数据
-      res.send({ msg: "add OK", res: JSON.stringify(result) }); // 查询的结果转换成字符串返回
-    });
+      res.send({ msg: "add OK", res: result }); // 查询的结果转换成字符串返回
+    }
+  );
 });
 
 module.exports = router;

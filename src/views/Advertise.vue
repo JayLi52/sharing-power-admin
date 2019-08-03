@@ -14,7 +14,7 @@
         @change="handleTableChange"
       >
         <template slot="material" slot-scope="text, record">
-          <img :src="record.material" alt="" width="100">
+          <img :src="record.material" alt width="100">
         </template>
       </a-table>
     </a-card>
@@ -60,6 +60,7 @@
 </template>
 <script>
 import axios from "axios";
+import * as R from "ramda";
 const columns = [
   {
     title: "广告 ID",
@@ -78,15 +79,6 @@ const columns = [
     title: "广告主",
     dataIndex: "advertiser"
   }
-  // {
-  //   title: "入驻时间",
-  //   dataIndex: "createdAt"
-  // },
-  // {
-  //   title: "操作",
-  //   key: "operation",
-  //   scopedSlots: { customRender: "operation" }
-  // }
 ];
 
 export default {
@@ -129,22 +121,44 @@ export default {
       this.visible = true;
     },
     save(data) {
-      axios
-        .post("http://localhost:3100/v1/advertise", {
-          ...data
-        })
-        .then(res => {
-          console.log(res);
-        });
+      const { id, material } = data;
+      // 检查原有数组中是否存在新增数据
+      const isExist = this.data.some(item => {
+        const pred = R.whereEq({ id });
+        return pred(item);
+      });
+
+      console.log("isExist", isExist);
+      if (isExist) {
+        this.$message.warning("重复添加数据");
+        return;
+      }
+
+      const img = new Image();
+      img.onload = () => {
+        console.log(img.width, img.height);
+        if (img.width === 300 && img.height === 300) {
+          this.$message.success("图片符合规格");
+          axios
+            .post("http://localhost:3100/v1/advertise", {
+              ...data
+            })
+            .then(res => {
+              console.log(res);
+              this.$message.success("添加数据成功");
+              this.fetch()
+              this.visible = false;
+            });
+        } else {
+          this.$message.warning("图片不符合规格");
+        }
+      };
+      img.src = material;
     },
     handleSubmit() {
       this.form.validateFields((err, values) => {
         let data = {
-          id: values.id,
-          boxId: values.boxId,
-          createdAt: new Date().toString(),
-          times: 0,
-          power: 100
+          ...values
         };
         console.log(data);
         if (!err) {

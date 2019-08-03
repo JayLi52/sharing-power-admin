@@ -79,11 +79,6 @@ export default {
           title: "维修工单管理",
           icon: "shop",
           path: "/Index/Works"
-        },
-        {
-          title: "系统设置",
-          path: "/setting_list",
-          icon: "setting"
         }
       ],
       userInfo: null

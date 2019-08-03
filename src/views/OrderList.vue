@@ -12,7 +12,7 @@
       <a-tag color="#f50" v-if="record.isReturned==false">未完成</a-tag>
     </template>
     <template slot="operation" slot-scope="text, record">
-      <a-button @click="() => updateStatus(text, record)">更新状态</a-button>
+      <a-button @click="() => updateStatus(text, record)" :disabled="record.isReturned">更新状态</a-button>
     </template>
   </a-table>
 </template>
@@ -30,6 +30,10 @@ const columns = [
   {
     title: "充电柜位置",
     dataIndex: "address"
+  },
+  {
+    title: "下单用户 OpenID",
+    dataIndex: "openid"
   },
   {
     title: "下单时间",
